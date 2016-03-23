@@ -7,10 +7,13 @@ use Mgl846\plainte;
  * Date: 2016-03-20
  * Time: 23:52
  */
-class PlainteTest extends \PHPUnit_Framework_TestCase
+class plainteTest extends \PHPUnit_Framework_TestCase
 {
 
-    function testGetCodePostal()
+	/**
+	 * @test
+	 * */
+    function getCodePostal()
     {
         $p = new plainte();
         $p->setCodePostal("H1S2N5");

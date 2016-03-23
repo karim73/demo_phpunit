@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phpunit colors="true">
     <testsuites>
-        <testsuite name="MGL846 - Demo PHPUnit">
+        <testsuite>
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
+    <filter processUncoveredFilesFromWhiteList="true">
+    	<whitelist>
+    		<directory suffix=".php">./src/</directory>
+    	</whitelist>
+    </filter>
 </phpunit>

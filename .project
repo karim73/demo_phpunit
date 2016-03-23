@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>demo_phpunit</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<variableList>
+		<variable>
+			<name>vendor</name>
+			<value>file:/host/partage/workspace/demo_phpunit/vendor</value>
+		</variable>
+	</variableList>
+</projectDescription>

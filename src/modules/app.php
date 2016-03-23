@@ -83,8 +83,14 @@ class app
         return json_decode($response,true);
     }
 
-    function recuperer_formulaire($source)
+    /**
+     * @params:
+     * $source : array
+     * */
+    public function recuperer_formulaire($source)
     {
+		print "Inside " ;
+    	print_r($source);
         $obj = new plainte();
 
         $obj->setCodePostal( $this->getValue($source,'code_postal') );
