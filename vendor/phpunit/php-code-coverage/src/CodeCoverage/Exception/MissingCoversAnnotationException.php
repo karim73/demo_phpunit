@@ -9,10 +9,10 @@
  */
 
 /**
- * Exception that is raised when code is unintentionally covered.
+ * Exception that is raised when @covers must be used but is not.
  *
- * @since Class available since Release 2.0.0
+ * @since Class available since Release 3.2.0
  */
-class PHP_CodeCoverage_Exception_UnintentionallyCoveredCode extends PHP_CodeCoverage_Exception
+class PHP_CodeCoverage_MissingCoversAnnotationException extends PHP_CodeCoverage_RuntimeException
 {
 }

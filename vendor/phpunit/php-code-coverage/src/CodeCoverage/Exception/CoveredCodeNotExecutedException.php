@@ -9,10 +9,10 @@
  */
 
 /**
- * Exception class for PHP_CodeCoverage component.
+ * Exception that is raised when covered code is not executed.
  *
- * @since Class available since Release 1.1.0
+ * @since Class available since Release 3.1.0
  */
-class PHP_CodeCoverage_Exception extends RuntimeException
+class PHP_CodeCoverage_CoveredCodeNotExecutedException extends PHP_CodeCoverage_RuntimeException
 {
 }

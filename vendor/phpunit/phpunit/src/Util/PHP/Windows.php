@@ -30,7 +30,7 @@ class PHPUnit_Util_PHP_Windows extends PHPUnit_Util_PHP_Default
      *
      * @see https://bugs.php.net/bug.php?id=51800
      */
-    public function runJob($job, array $settings = array())
+    public function runJob($job, array $settings = [])
     {
         $runtime = new Runtime;
 
@@ -42,11 +42,11 @@ class PHPUnit_Util_PHP_Windows extends PHPUnit_Util_PHP_Default
 
         $process = proc_open(
             $runtime->getBinary() . $this->settingsToParameters($settings),
-            array(
-            0 => array('pipe', 'r'),
+            [
+            0 => ['pipe', 'r'],
             1 => $stdout_handle,
-            2 => array('pipe', 'w')
-            ),
+            2 => ['pipe', 'w']
+            ],
             $pipes
         );
 
@@ -70,13 +70,15 @@ class PHPUnit_Util_PHP_Windows extends PHPUnit_Util_PHP_Default
 
         $this->cleanup();
 
-        return array('stdout' => $stdout, 'stderr' => $stderr);
+        return ['stdout' => $stdout, 'stderr' => $stderr];
     }
 
     /**
-     * @param  resource                    $pipe
-     * @param  string                      $job
+     * @param resource $pipe
+     * @param string   $job
+     *
      * @throws PHPUnit_Framework_Exception
+     *
      * @since  Method available since Release 3.5.12
      */
     protected function process($pipe, $job)
