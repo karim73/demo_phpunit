@@ -2,7 +2,7 @@
 
 require_once( 'vendor/autoload.php' );
 
-use \Mgl846\app as app;
+use Mgl846\Plainte\controller\app as app;
 
 $app = new app();
-$app->process_plainte();
+print $app->processer_plainte();
